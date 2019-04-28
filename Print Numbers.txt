@@ -1,0 +1,50 @@
+Imports System
+				
+Public Module Module1
+	Public Sub Main()
+		  Dim displayMenu As Boolean = True
+        While (displayMenu)
+            displayMenu = MainMenue()
+        End While
+
+    End Sub
+
+    Function MainMenue() As Boolean
+        Console.Clear()
+        Console.WriteLine("Choose an option: ")
+        Console.WriteLine("1 - Print Numbers")
+        Console.WriteLine("2 - Guessing Game")
+        Console.WriteLine("3 - Exit")
+
+        Dim result As String = Console.ReadLine()
+
+        If result = "1" Then
+            Return PrintNumbers()
+        ElseIf result = "2" Then
+            Return GuessingGame()
+        ElseIf result = "3" Then
+            Return False
+        Else
+            Return True
+        End If
+
+    End Function
+
+    Function PrintNumbers() As Boolean
+
+        Console.WriteLine("PrintNumbers Game Here")
+        Console.ReadLine()
+        Return True
+
+
+    End Function
+
+    Function GuessingGame() As Boolean
+
+        Console.WriteLine("Guessing Game Here")
+        Console.ReadLine()
+        Return True
+
+    End Function
+	
+End Module
